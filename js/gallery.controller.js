@@ -57,7 +57,7 @@ function onSetLang() {
     document.body.classList.toggle('rtl')
     setLang()
     if (getCurrentLang()) getDomElement('.change-lang').innerText = 'EN'
-    else getDomElement('.change-lang').innerText = 'HE'
+    else getDomElement('.change-lang').innerText = 'עב'
 }
 
 function onSearchMeme(key) {
