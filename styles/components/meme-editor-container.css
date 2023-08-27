@@ -1,0 +1,19 @@
+.meme-editor-container {
+    grid-template-rows: auto 1fr;
+    column-gap: 20px;
+
+    padding: 1em;
+    border: 2px solid var(--clrPrimary-1);
+    background-color: var(--clrPrimary);
+    border-radius: 0.5em;
+    margin: 0 0 1em 0;
+}
+
+.meme-editor-container .canvas-container {
+    width: 50vw;
+}
+
+.meme-editor-container canvas {
+    border-radius: 0.5em;
+    box-shadow: 0 0 2px 2px #c3c3c3;
+}

@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: linear-gradient(45deg, #ffffff, #e2e2e2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.111);
+    margin-bottom: 1em;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar li:last-of-type {
+    margin-inline-end: 2em;
+}

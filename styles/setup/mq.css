@@ -1,0 +1,43 @@
+/* MOBILE */
+@media (max-width: 710px) {
+    .meme-editor-container {
+        grid-template-columns: none;
+        justify-items: center;
+    }
+}
+
+/* Small and Larger */
+@media (min-width: 710px) {
+    .meme-editor-container {
+        grid-template-columns: auto 1fr;
+    }
+
+    .search-bar-container {
+        grid-template-columns: 1fr 2fr 5fr 1fr;
+        grid-template-rows: none;
+    }
+
+    .search-bar-container * {
+        margin-block-end: 0;
+    }
+
+    .search-bar-container .filter-by-selector {
+        grid-column: 1;
+    }
+
+    .search-bar-container .btn-upload-img {
+        grid-column: 2;
+        margin-inline-end: 1em;
+    }
+
+    .search-bar-container .search-bar {
+        grid-column: 3;
+        margin-inline-end: 1em;
+    }
+
+    .search-bar-container .btn-flexible {
+        grid-column: 4;
+    }
+
+
+}

@@ -1,0 +1,21 @@
+/* SETUP */
+@import url("setup/vars.css");
+@import url("setup/typography.css");
+
+/* BASICS  */
+@import url("basics/base.css");
+@import url("basics/layout.css");
+@import url("basics/helpers.css");
+
+/* COMPONENTS */
+@import url("components/navbar.css");
+@import url("components/logo.css");
+@import url("components/search-bar-container.css");
+@import url("components/word-cloud-container.css");
+@import url("components/gallery-container.css");
+@import url("components/saved-memes-container.css");
+@import url("components/meme-editor-container.css");
+@import url("components/meme-editor-controls.css");
+
+/* MEDIA QUERIES */
+@import url("setup/mq.css");

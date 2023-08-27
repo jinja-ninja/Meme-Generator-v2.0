@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: josefin, sans-serif;
+    color: var(--clrTxt);
+    line-height: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    margin: 0 0 1em;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bgColor);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: var(--clrTxt);
+    text-decoration: none;
+}
+
+/* btns */
+
+.btn {
+    font-family: 'josefin';
+    font-size: 0.9rem;
+
+    padding: 0.2em 0.5em;
+
+    border-width: 2px;
+    border-color: var(--clrPrimary-1);
+    border-style: solid;
+    border-radius: 0.5em;
+
+    background-color: var(--clrPrimary);
+
+    transition: background-color
+}
+
+.btn img {
+    width: 15px;
+    height: 15px;
+}

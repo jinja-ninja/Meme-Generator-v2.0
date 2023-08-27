@@ -1,0 +1,69 @@
+.search-bar-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    padding: 0.5em;
+    border: 2px solid var(--clrPrimary-1);
+    border-radius: 0.5em;
+    background-color: var(--clrPrimary);
+
+    margin-bottom: 1em;
+}
+
+.search-bar-container * {
+    font-family: 'josefin';
+
+    padding: 0.5em;
+    border: 2px solid var(--clrPrimary-1);
+    border-radius: 0.3em;
+    background-color: var(--clrPrimary);
+
+    margin-block-end: 1em;
+}
+
+.search-bar-container .btn {
+    font-size: 0.9em;
+    font-family: 'josefin';
+    text-align: center;
+    white-space: nowrap;
+    margin-block-start: 0;
+
+    transition: background-color .3s;
+}
+
+.search-bar-container .btn:hover {
+    background-color: var(--clrPrimary-2);
+    cursor: pointer;
+}
+
+.search-bar-container .search-bar {
+    grid-column: 1 / 4;
+    margin-inline-end: 1em;
+}
+
+.search-bar-container .btn-flexible {
+    grid-column: 4;
+}
+
+.search-bar-container .filter-by-selector {
+    grid-column: 1/3;
+    margin-inline-end: 1em;
+}
+
+.search-bar-container .btn-upload-img {
+    grid-column: 3/-1;
+    color: var(--clrTxt-1);
+    background-color: var(--clrPrimary-3);
+    border-color: var(--clrPrimary-2);
+    transition: background-color .3s;
+}
+
+.search-bar-container .btn-upload-img:hover {
+    color: var(--clrPrimary-2);
+    background-color: #c1c1c1;
+}
+
+.search-bar-container input[type=file]::file-selector-button {
+    display: none;
+}

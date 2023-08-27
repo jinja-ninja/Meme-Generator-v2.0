@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Meme Generator</title>
+</head>
+
+<body onload="onInit()">
+
+    <nav class="navbar">
+        <div class="logo" data-trans="logo" onclick="hideMemeEditor()">Meme Generator</div>
+        <ul class=" page-links clean-list">
+            <li><a href="#" data-trans="saved-memes" onclick="onInitSavedMemes()">SAVED</a></li>
+            <li><a href="#" class="change-lang" onclick="onSetLang()">EN</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-container grid">
+
+        <section class="search-bar-container">
+            <select name="themes" placeholder="Filter by theme" class="filter-by-selector"
+                onchange="onFilterClick(this.value)"> <!--How to do it with form and datalist and Submit?-->
+                <!--Expalin how to look at 'event' and at 'this'-->
+                <option value="" data-trans="select-theme-all">Select Theme</option>
+                <option value="kid" data-trans="select-theme-kids">Kids</option>
+                <option value="beach" data-trans="select-theme-beach">Beach</option>
+                <option value="dogs" data-trans="select-theme-dogs">Dogs</option>
+                <option value="evil" data-trans="select-theme-evil">Evil</option>
+            </select>
+            <input type="file" class="btn btn-upload-img" name="image" onchange="onImgInput(event)"
+                accept="image/*" /><!--How to Center Text here?-->
+            <input type="text" data-trans="search" placeholder="Search meme" class="search-bar"
+                oninput="onSearchMeme(this.value)">
+            <button class="btn btn-flexible" data-trans="btnFlex" onclick="onClickFlexible()">I'm flexible</button>
+        </section>
+
+        <section class="word-cloud-container"></section>
+
+
+        <section class="meme-editor-container hide">
+
+            <section class="canvas-container">
+                <canvas tabindex='1' width="260" height="260"></canvas>
+            </section>
+
+            <section class="meme-editor-controls flex flex-direction-column">
+                <input type="text" placeholder="Enter text" class="user-text-input" oninput="onTextInput(this.value)">
+                <div class="line-controls">
+                    <button class="btn btn-swtich-lines" onclick="onSwitchLine()"><img
+                            src="icons/icons8_change_50px.png" alt=""></button>
+                    <button class="btn btn-add-line" onclick="onAddLine()"><img src="icons/icons8_add_50px.png"
+                            alt=""></button>
+                    <button class="btn btn-delete-line" onclick="onDeleteSelectedLine()"><img
+                            src="icons/icons8_Delete_50px.png" alt=""></button>
+                </div>
+
+                <section class="text-editor">
+                    <div class="text-controls">
+                        <button class="btn btn-enlarge-text-size" onclick="onIncreaseSize()"><img
+                                src="icons/icons8_increase_font_50px.png" alt=""></button><!-- How to do it with SVG?-->
+                        <button class="btn btn-reduce-text-size" onclick="onDecreaseSize()"><img
+                                src="icons/icons8_decrease_font_50px.png" alt=""></button>
+                        <button class="btn btn-text-justify-left" onclick="onSetTextAlignment('end')"><img
+                                src="icons/icons8_align_left_50px.png" alt=""></button>
+                        <button class="btn btn-text-justify-center" onclick="onSetTextAlignment('center')"><img
+                                src="icons/icons8_align_justify_50px.png" alt=""></button>
+                        <button class="btn btn-text-justify-right" onclick="onSetTextAlignment('start')"><img
+                                src="icons/icons8_align_right_50px.png" alt=""></button>
+                    </div>
+
+                    <div class="font-controls">
+                        <select name="fonts" onchange="onSetFont(this.value)">
+                            <option value="Impact">IMPACT</option>
+                            <option value="Monospace">NOT IMPACT</option>
+                        </select>
+                        <input type="color" class="select-text-color" oninput="onChangeTextColor(this.value)">
+                    </div>
+                </section>
+
+                <div class="stickers-container">
+                    <span class="sticker" onclick="onStickerClick(this.innerText)">😎</span>
+                    <!-- That's the stupidest way possible-->
+                    <span class="sticker" onclick="onStickerClick(this.innerText)">😵</span>
+                    <!-- How to make them draggable to the Canvas?-->
+                    <span class="sticker" onclick="onStickerClick(this.innerText)">😄</span>
+                    <span class="sticker" onclick="onStickerClick(this.innerText)">😉</span>
+                    <span class="sticker" onclick="onStickerClick(this.innerText)">😍</span>
+                    <span class="sticker" onclick="onStickerClick(this.innerText)">❤</span>
+                </div>
+
+                <div class="share-meme">
+                    <a href="#" onclick="onDownloadClick(this)" download="file-name">Download</a>
+                    <a href="#" onclick="onSaveMeme()">Save</a>
+                    <a href="#" onclick="onUploadImg()">Share</a>
+                </div>
+
+
+            </section>
+
+        </section>
+
+        <section class="gallery-container grid"></section> <!--How to make the image fade on hover?-->
+        <section class="saved-memes-container hide"></section>
+
+    </section>
+
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/meme.service.js"></script>
+    <script src="js/services/gallery.service.js"></script>
+    <script src="js/gallery.controller.js"></script>
+    <script src="js/meme.controller.js"></script>
+</body>
+
+</html>
